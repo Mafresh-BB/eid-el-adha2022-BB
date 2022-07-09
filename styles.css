@@ -1,0 +1,118 @@
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+  /* box-sizing and font sizing */
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box;
+  
+    /* Set font size for easy rem calculations
+     * default document font size = 16px, 1rem = 16px, 100% = 16px
+     * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  body {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(25, 31, 41);
+    border: 10px dotted white;
+    border-radius: 30px / 50px;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    font-family: cursive, sans-serif;
+  }
+  main {
+    position: relative;
+    height: 90vh;
+  }
+  h1 {
+    position: absolute;
+    top: 40%;
+    margin: 0 auto;
+    transform: translateX(10%);
+    animation: head 5s linear infinite;
+  }
+  p {
+    position: absolute;
+    top: 50%;
+  }
+  footer {
+    background-color: chocolate;
+    width: 100%;
+    padding: 2rem;
+  }
+  .circle {
+    height: 10vh;
+    width: 10vh;
+    background-color: bisque;
+    border-radius: 50%;
+    position: absolute;
+    transform-origin: 50% 0;
+    animation: circles 10s ease-in-out infinite;
+  }
+  .circle:nth-of-type(1) {
+    top: 70%;
+    right: 15%;
+  }
+  .circle:nth-of-type(2) {
+    top: 75%;
+    left: 15%;
+  }
+  .circle:nth-of-type(3) {
+    top: 50%;
+    right: 40%;
+  }
+  .circle:nth-of-type(4) {
+    top: 10%;
+    right: 30%;
+  }
+  .circle:nth-of-type(5) {
+    top: 30%;
+    left: 15%;
+  }
+  .circle:nth-of-type(6) {
+    top: 25%;
+    right: 5%;
+  }
+  .circle:nth-of-type(7) {
+    top: 80%;
+    left: 50%;
+  }
+  .circle:nth-of-type(8) {
+    top: 8%;
+    left: 10%;
+  }
+
+@keyframes circles {
+    25% {
+        background-color: yellow;
+    }
+    50% {
+        background-color: purple;
+    }
+    75% {
+        background-color: olivedrab;
+    }
+}
+@keyframes head {
+    30% {
+        color: darkmagenta;
+    }
+    60% {
+        color: red;
+    }
+    90% {
+        color: gold;
+    }
+}
